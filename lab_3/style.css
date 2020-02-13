@@ -21,7 +21,6 @@ body {
 h1, h2, h3 {
   font-family: 'Cinzel Decorative', cursive;
   color: #2a2a2a;
-  background-color: green;
 }
 
 p, input, li {
@@ -33,6 +32,7 @@ h1 {
   font-size: 4rem;
   text-align: center;
   text-shadow: 2px 2px 10px black;
+  background-color: greenyellow;
 }
 
 h2 {
