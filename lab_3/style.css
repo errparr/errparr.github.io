@@ -7,7 +7,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: blue;
+  background-color: #a9a9a9;
 }
 
 body {
@@ -81,7 +81,6 @@ nav {
   height: 50px;
   flex: 100%;
   display: flex;
-  font-weight: 600;
 }
 
 nav ul {
@@ -112,7 +111,6 @@ nav a, nav span {
 
 main {
   display: flex;
-  font-weight: 900;
 }
 
 article, section {
