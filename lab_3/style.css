@@ -7,7 +7,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: blue;
 }
 
 body {
@@ -32,7 +32,6 @@ h1 {
   font-size: 4rem;
   text-align: center;
   text-shadow: 2px 2px 10px black;
-  background-color: greenyellow;
 }
 
 h2 {
@@ -82,6 +81,7 @@ nav {
   height: 50px;
   flex: 100%;
   display: flex;
+  font-weight: 600;
 }
 
 nav ul {
@@ -112,6 +112,7 @@ nav a, nav span {
 
 main {
   display: flex;
+  font-weight: 900;
 }
 
 article, section {
