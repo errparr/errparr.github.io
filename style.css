@@ -1,0 +1,62 @@
+@media(min-width:768px){
+    .header{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        background-color: brown;
+        color: lightblue;
+        text-align: center;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .content{
+        max-width: 960px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .one{
+        padding: 10px;
+        background-color: lightgray;
+        width: 175px;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .two{
+        padding: 10px;
+        background-color: lightgray;
+        width: 175px;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        flex: 4;
+    }
+    
+    body{
+        background-color: paleturquoise;
+        max-width: 50%;
+        min-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .image{
+        border: 1px;
+        border-radius: 4px;
+    }
+    
+    h2{
+        font-family: 'Passion One';
+        font-size: 30px;
+    }
+    
+    .jobtitle{
+        font-family: 'Patua One';
+        font-size: 20px;
+    }    
+}
