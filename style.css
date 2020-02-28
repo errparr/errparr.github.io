@@ -20,12 +20,16 @@
 
     .one{
         padding: 10px;
-        background-color: lightgray;
         width: 175px;
         margin-right: 15px;
         display: flex;
         flex-direction: column;
         flex: 1;
+    }
+
+    .one p{
+        background-color: lightgray;
+        padding: 10px;
     }
     
     .two{
