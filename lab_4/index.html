@@ -28,6 +28,32 @@
       function clickMe() {
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+
+        const name = 'Ernie Park'
+        const third = name[2];
+        const lastThree = name.slice(-3);
+        const firstName = name.substring(0,5);
+        const lastName = name.substring(6,10);
+        const total = firstName.length + lastName.length;
+
+
+        const header = document.querySelector(".header");
+        header.innerHTML = name +"'s Lab 4" + " " + lastName;
+
+        const para1 = document.createElement("P");
+        para1.className = 'p1';
+        para1.innerHTML = "My name has " + name.length + " characters";
+        content.appendChild(para1)
+
+        const para2 = document.createElement("P");
+        para2.className = 'p2';
+        para2.innerHTML = "The third character in my name is " + third.toUpperCase();
+        content.appendChild(para2);
+
+        const br = document.createElement('br');
+        para2.appendChild(br);
+        br.append(lastThree);
+
       }
     </script>
   </body>
