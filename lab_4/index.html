@@ -50,10 +50,7 @@
         para2.innerHTML = "The third character in my name is " + third.toUpperCase();
         content.appendChild(para2);
 
-        const br = document.createElement('br');
-        para2.appendChild(br);
-        br.append(lastThree);
-
+        para2.innerHTML += "</br>" +lastThree;
       }
     </script>
   </body>
