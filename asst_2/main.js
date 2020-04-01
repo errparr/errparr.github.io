@@ -6,6 +6,8 @@ const overlay = document.querySelector('.overlay');
 
 
 /* Looping through images */
+//This link helped us tremendously with getting the base of our code//
+//https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/gallery
 
 for (let i = 1; i <= 5; i++) {
     const newImage = document.createElement("img");
@@ -15,6 +17,7 @@ for (let i = 1; i <= 5; i++) {
       displayedImage.src = p.target.src;
     }
   }
+
 
 /* Wiring up the Darken/Lighten button */
 
@@ -30,3 +33,7 @@ btn.onclick = function() {
         overlay.style.backgroundColor = 'rgba(0,0,0,0)';
     }
 }
+
+
+
+console.log(img_array);
