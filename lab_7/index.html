@@ -43,13 +43,40 @@
         id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
-        accessToken: 'your.mapbox.access.token'
+        accessToken: 'pk.eyJ1IjoiZXJycGFyciIsImEiOiJjazhrZDkxaHcwMG95M2pvMjFsaTJ6eHBmIn0.CflXiYCXVe9BFKAC6N_wYw'
       }
       )
       .addTo(mymap);
-      const mark1 = L.marker([51.5, -0.09]).addTo(mymap);
-      /* N.B. - For your lab, use the variable "countries" now available on the window space */
-      console.log("List of countries in the world", countries);
+      const mark1 = L.marker([38.988160, -76.941621]).addTo(mymap);
+      mark1.bindPopup("<b>Hornbake Library</b><br>I am a popup.").openPopup();
+
+      fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
+        .then((response) => 
+        {
+          return response.json();
+        })
+        .then((data) => 
+        {
+          console.log(data);
+
+          const coord = [data[2].geocoded_column_1.coordinates[0],
+                         data[2].geocoded_column_1.coordinates[1], 
+                         data[5].geocoded_column_1.coordinates[0],
+                         data[5].geocoded_column_1.coordinates[1],
+                         data[8].geocoded_column_1.coordinates[0],
+                         data[8].geocoded_column_1.coordinates[1]];
+          console.log(coord);
+
+          const mark2 = L.marker([coord[1], coord[0]]).addTo(mymap);
+          mark2.bindPopup(data[2].name).openPopup();
+
+          const mark3 = L.marker([coord[3], coord[2]]).addTo(mymap);
+          mark3.bindPopup(data[5].name).openPopup();
+
+          const mark4 = L.marker([coord[5], coord[4]]).addTo(mymap);
+          mark4.bindPopup(data[8].name).openPopup();
+        });
+      
     </script>
   </body>
 </html>
