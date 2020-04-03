@@ -9,31 +9,37 @@ const overlay = document.querySelector('.overlay');
 //Followed along the MDN and their example of the image gallery
 
 /* Looping through images */
-for(let i = 1; i <= 5; i++) 
-{
-    const newImage=document.createElement('img');
-    newImage.setAttribute('src', 'images/pic' + i + '.jpg');
-    thumbBar.appendChild(newImage);
-    newImage.onclick=function(e) 
-    {
-      displayedImage.src = e.target.src;
-    } 
+const img_array = ['images/pic1.jpg','images/pic2.jpg','images/pic3.jpg','images/pic4.jpg','images/pic5.jpg'];
+
+img_array.forEach(function(item){
+  let newImage = document.createElement("img");
+  newImage.setAttribute('src', item);
+  thumbBar.appendChild(newImage);
+
+  newImage.addEventListener('click',setImage);
+});
+
+function setImage(e){
+  // get the file path of the thumbnail picture 
+  let imgPath = e.target.getAttribute('src');
+
+  // set thumbnail as the picture displayed 
+  displayedImage.setAttribute('src', imgPath);
 }
 
-/* Darken/Lighten button */
-btn.onclick = function() 
-{
-  const btnClass = btn.getAttribute('class');
-  if(btnClass==='dark') //switching between light and dark
+/* Wiring up the Darken/Lighten button */
+
+btn.onclick = function(){
+  if(btn.getAttribute("class") == "dark")
   {
-    btn.setAttribute('class','light');
-    btn.textContent='Lighten';
-    overlay.style.backgroundColor='rgba(0,0,0,0.5)';
-  } 
-  else 
+    btn.setAttribute("class", "light");
+    btn.textContent = "lighten";
+    overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
+  }
+  else
   {
-    btn.setAttribute('class','dark');
-    btn.textContent='Darken';
-    overlay.style.backgroundColor='rgba(0,0,0,0)';
+    btn.setAttribute("class", "dark");
+    btn.textContent = 'darken';
+    overlay.style.backgroundColor = "rgba(0,0,0,0)";
   }
 }

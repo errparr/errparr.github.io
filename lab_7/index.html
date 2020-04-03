@@ -14,6 +14,12 @@
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""
     ></script>
+    <style>
+      #map1{
+        width: 540px;
+        height: 480px;
+      }
+    </style>
   </head>
 
   <body>
@@ -21,12 +27,27 @@
       <div class="wrapper">
         <div class="header">Front End Libraries Lab</div>
         <div class="content">
-          When your lab is done, this should be replaced with a stylish map.
+          <div id="map1">
+
+          </div>
         </div>
         <div class="footer">Make some markers work!</div>
       </div>
     </div>
     <script>
+      const mymap = L.map('map1').setView([51.505, -0.09], 13);
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', 
+      {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'your.mapbox.access.token'
+      }
+      )
+      .addTo(mymap);
+      const mark1 = L.marker([51.5, -0.09]).addTo(mymap);
       /* N.B. - For your lab, use the variable "countries" now available on the window space */
       console.log("List of countries in the world", countries);
     </script>
