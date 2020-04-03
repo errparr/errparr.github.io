@@ -9,6 +9,8 @@ const overlay = document.querySelector('.overlay');
 //Followed along the MDN and their example of the image gallery
 
 /* Looping through images */
+//We used this link to help us convert our initial for loop: 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 const img_array = ['images/pic1.jpg','images/pic2.jpg','images/pic3.jpg','images/pic4.jpg','images/pic5.jpg'];
 
 img_array.forEach(function(item){
